@@ -1,3 +1,13 @@
+// Insert at the end of the list
+// merge two sorted ListNode
+//Reverse the node
+//remove duplicate
+//remove key from the given list
+//Insert in sorted list
+//serach the key
+
+
+
 import java.util.List;
 
 class ListNode {
@@ -14,18 +24,18 @@ class SinglyLinkedList {
     ListNode head;
 
     // Insert at the end of the list
-//    public void insert(int data) {
-//        ListNode newNode = new ListNode(data);
-//        if (head == null) {
-//            head = newNode;
-//        } else {
-//            ListNode current = head;
-//            while (current.next != null) {
-//                current = current.next;
-//            }
-//            current.next = newNode;
-//        }
-//    }
+   public void insert(int data) {
+       ListNode newNode = new ListNode(data);
+       if (head == null) {
+           head = newNode;
+       } else {
+           ListNode current = head;
+           while (current.next != null) {
+               current = current.next;
+           }
+           current.next = newNode;
+       }
+   }
 
     // Delete a node by value
 
