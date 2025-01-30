@@ -5,11 +5,11 @@
 //Insert at the end of List
 //Insert at position
 //Delete from First
-//merge two sorted ListNode
+//merge two sorted Node
 
 
 
-//ListNode = Node (Here we use Node as the class name);
+//Node = Node (Here we use Node as the class name);
 class Node{
     int data;
     Node next;
@@ -98,10 +98,12 @@ public Node deleteFirst() {
 }
 
 
-    // merge two sorted ListNode
-    public static ListNode merge(ListNode a, ListNode b) {
-        ListNode dummy = new ListNode(0);
-        ListNode tail = null;
+
+
+    // merge two sorted Node
+    public static Node merge(Node a, Node b) {
+        Node dummy = new Node(0);
+        Node tail = null;
         while (a != null && b != null) {
             if (a.data <= b.data) {
                 tail.next = a;
@@ -121,6 +123,16 @@ public Node deleteFirst() {
         return dummy.next;
     }
 
+    public void deletePos(int post){
+        Node prev=head;
+        int count=1;
+        while(count<post-1){
+            prev=prev.next;
+            count++;
+        }
+        Node curr =prev.next;
+        prev.next=curr.next;
+    }
 
     public static void main (String[] args) {
         /* code */
@@ -140,13 +152,19 @@ public Node deleteFirst() {
 
         obj.insertPos(15,3);
         obj.insertPos(1,1);
+        obj.insertPos(2,3);
 
-//        obj.deleteFirst();
+        obj.deleteFirst();
+
 
         System.out.print("Linked List: ");
+
+        obj.display();
+        obj.deletePos(2);
         obj.display();
         System.out.print("Linked List: "+ obj.count());
         obj.deleteFirst();
+//        System.out.println();
         System.out.println("\nLinked List Delete from First: "+ obj.deleteFirst().data);
 
     }
