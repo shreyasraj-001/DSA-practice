@@ -1,3 +1,14 @@
+
+//Display the List
+//Count the List of Nodes
+//Insert at Beginning of List
+//Insert at the end of List
+//Insert at position
+//Delete from First
+//merge two sorted ListNode
+
+
+
 //ListNode = Node (Here we use Node as the class name);
 class Node{
     int data;
