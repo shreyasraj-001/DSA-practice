@@ -101,27 +101,27 @@ public Node deleteFirst() {
 
 
     // merge two sorted Node
-    public static Node merge(Node a, Node b) {
-        Node dummy = new Node(0);
-        Node tail = null;
-        while (a != null && b != null) {
-            if (a.data <= b.data) {
-                tail.next = a;
-                a = a.next;
-            } else {
-                tail.next = b;
-                b = b.next;
-            }
-            tail = tail.next;
-        }
+//    public static Node merge(Node a, Node b) {
+//        Node dummy = new Node(0);
+//        Node tail = null;
+//        while (a != null && b != null) {
+//            if (a.data <= b.data) {
+//                tail.next = a;
+//                a = a.next;
+//            } else {
+//                tail.next = b;
+//                b = b.next;
+//            }
+//            tail = tail.next;
+//        }
         // Handle remaining elements (unchanged)
-        if (a == null) {
-            tail.next = b;
-        } else {
-            tail.next = a;
-        }
-        return dummy.next;
-    }
+//        if (a == null) {
+//            tail.next = b;
+//        } else {
+//            tail.next = a;
+//        }
+//        return dummy.next;
+//    }
 
     public void deletePos(int post){
         Node prev=head;
